@@ -26,12 +26,11 @@ module Unicode
       INDEX[:ALIASES][codepoint]
     end
 
-=begin
     def self.label(char)
       codepoint = char.unpack("U")[0]
-      codepoint_pretty = codepoint.to_s(16).upcase
+      codepoint_pretty = "%.4X" % codepoint
       require_relative "name/index" unless defined? ::Unicode::Name::INDEX
-      require "unicode/types/index" unless defined? ::Unicode::Types::INDEX
+      require "unicode/types" unless defined? ::Unicode::Types
       case Unicode::Types.type(char)
       when "Graphic", "Format"
         nil
@@ -47,7 +46,6 @@ module Unicode
         "<reserved-#{codepoint_pretty}>"
       end
     end
-=end
 
     def self.readable(char)
       unicode_name(char) ||
@@ -55,8 +53,8 @@ module Unicode
       ( as[:control]      && as[:control][0]      ||
         as[:figment]      && as[:figment][0]      ||
         as[:alternate]    && as[:alternate][0]    ||
-        as[:abbreviation] && as[:abbreviation][0]  ) #||
-      # label(char)
+        as[:abbreviation] && as[:abbreviation][0]  ) ||
+      label(char)
     end
   end
 end
