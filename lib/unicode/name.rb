@@ -6,7 +6,15 @@ module Unicode
     def self.unicode_name(char) 
       codepoint = char.unpack("U")[0]
       require_relative "name/index" unless defined? ::Unicode::Name::INDEX
-      INDEX[:NAMES][codepoint]
+      if res = INDEX[:NAMES][codepoint]
+        res
+      elsif INDEX[:CJK].any?{ |cjk_range| codepoint >= cjk_range[0] && codepoint <= cjk_range[1] }
+        "CJK UNIFIED IDEOGRAPH-%.4X" % codepoint
+      elsif codepoint >= INDEX[:HANGUL][0][0] && codepoint <= INDEX[:HANGUL][0][1]
+        "HANGUL SYLLABLE-%.4X" % codepoint
+      else
+        nil
+      end
     end
     class << self; alias of unicode_name; end
 
@@ -16,7 +24,7 @@ module Unicode
       if correction = INDEX[:ALIASES][codepoint] && INDEX[:ALIASES][codepoint][:correction][-1]
         correction
       else
-        INDEX[:NAMES][codepoint]
+        unicode_name(char)
       end
     end
 

@@ -9,6 +9,14 @@ describe Unicode::Name do
       assert_equal "REPLACEMENT CHARACTER", Unicode::Name.of("�")
     end
 
+    it "works for CJK Ideographs" do
+      assert_equal "CJK UNIFIED IDEOGRAPH-4E01", Unicode::Name.of("丁")
+    end
+
+    # it "works for Hangul Syllables" do
+    #   assert_equal "HANGUL SYLLABLE GAG", Unicode::Name.of("각")
+    # end
+
     it "will return nil for characters without name" do
       assert_equal nil, Unicode::Name.of("\u{10c50}")
       assert_equal nil, Unicode::Name.of("\0")

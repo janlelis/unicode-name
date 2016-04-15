@@ -14,6 +14,7 @@ require "unicode/name"
 # Name
 Unicode::Name.of "A" # => "LATIN CAPITAL LETTER A"
 Unicode::Name.of "🚡" # => "AERIAL TRAMWAY"
+Unicode::Name.of "丁" # => "CJK UNIFIED IDEOGRAPH-4E01"
 
 # Aliases, by type
 Unicode::Name.aliases "\t" # => {:control=>["CHARACTER TABULATION", "HORIZONTAL TABULATION"],
@@ -36,6 +37,10 @@ Unicode::Name.readable("\u{FFFFD}") # => "<private-use-FFFFD>"
 ```
 
 See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related micro libraries.
+
+## Todo
+
+* Hangul syllable names
 
 ## MIT License
 
