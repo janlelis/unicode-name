@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.3.0
+
+* Support Unicode 9.0
+
 ### 1.2.0
 
 * Support CJK Ideographs
@@ -10,5 +14,5 @@
 
 ### 1.0.0
 
-* Inital release
+* Initial release
 
