@@ -18,8 +18,8 @@ describe Unicode::Name do
     # end
 
     it "will return nil for characters without name" do
-      assert_equal nil, Unicode::Name.of("\u{10c50}")
-      assert_equal nil, Unicode::Name.of("\0")
+      assert_nil Unicode::Name.of("\u{10c50}")
+      assert_nil Unicode::Name.of("\0")
     end
   end
 
@@ -35,7 +35,7 @@ describe Unicode::Name do
 
   describe ".aliases" do
     it "will return nil if no alias available" do
-      assert_equal nil, Unicode::Name.aliases("A")
+      assert_nil Unicode::Name.aliases("A")
     end
 
     it "will always return a Hash" do
@@ -50,7 +50,7 @@ describe Unicode::Name do
 
   describe ".label" do
     it "will return nil for usual (graphic) characters" do
-      assert_equal nil, Unicode::Name.label("A")
+      assert_nil Unicode::Name.label("A")
     end
 
     it "will return <control-hhhh> for control characters" do
