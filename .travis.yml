@@ -4,13 +4,13 @@ language: ruby
 script: bundle exec ruby spec/unicode_name_spec.rb
 
 rvm:
-- 2.3.0
+- 2.4.0
+- 2.3.3
 - 2.2
 - 2.1
 - ruby-head
-- rbx-2
 - jruby-head
-- jruby-9.0.5.0
+- jruby-9.1.7.0
 
 cache:
 - bundler
@@ -18,4 +18,3 @@ cache:
 matrix:
   allow_failures:
     - rvm: jruby-head
-    - rvm: rbx-2

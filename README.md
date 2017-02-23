@@ -4,7 +4,7 @@ Return Unicode codepoint names, aliases, and labels.
 
 Unicode version: **9.0.0**
 
-Supported Rubies: **2.3**, **2.2**, **2.1**
+Supported Rubies: **2.4**, **2.3**, **2.2**, **2.1**
 
 ## Usage
 
