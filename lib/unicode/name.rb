@@ -2,6 +2,11 @@ require_relative "name/constants"
 
 module Unicode
   module Name
+    HANGUL_START = 44032
+    HANGUL_END = 55203
+    HANGUL_MEDIAL_MAX = 588
+    HANGUL_FINAL_MAX = 28
+
     # Don't overwrite Module.name
     def self.unicode_name(char) 
       codepoint = char.unpack("U")[0]
@@ -10,8 +15,8 @@ module Unicode
         res
       elsif INDEX[:CJK].any?{ |cjk_range| codepoint >= cjk_range[0] && codepoint <= cjk_range[1] }
         "CJK UNIFIED IDEOGRAPH-%.4X" % codepoint
-      elsif codepoint >= INDEX[:HANGUL][0][0] && codepoint <= INDEX[:HANGUL][0][1]
-        "HANGUL SYLLABLE-%.4X" % codepoint
+      elsif codepoint >= HANGUL_START && codepoint <= HANGUL_END
+        "HANGUL SYLLABLE %s" % hangul_decomposition(codepoint)
       else
         nil
       end
@@ -63,6 +68,17 @@ module Unicode
         as[:alternate]    && as[:alternate][0]    ||
         as[:abbreviation] && as[:abbreviation][0]  ) ||
       label(char)
+    end
+
+    private
+
+    # See https://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_Syllables_Area
+    def self.hangul_decomposition(codepoint)
+      base = codepoint - HANGUL_START
+      final = base % HANGUL_FINAL_MAX
+      medial = (base - final) % HANGUL_MEDIAL_MAX
+      initial = base / HANGUL_MEDIAL_MAX
+      "#{INDEX[:JAMO][:INITIAL][initial]}#{INDEX[:JAMO][:MEDIAL][medial]}#{INDEX[:JAMO][:FINAL][final]}"
     end
   end
 end

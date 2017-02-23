@@ -13,9 +13,10 @@ describe Unicode::Name do
       assert_equal "CJK UNIFIED IDEOGRAPH-4E01", Unicode::Name.of("丁")
     end
 
-    # it "works for Hangul Syllables" do
-    #   assert_equal "HANGUL SYLLABLE GAG", Unicode::Name.of("각")
-    # end
+    it "works for Hangul Syllables" do
+      assert_equal "HANGUL SYLLABLE HAN", Unicode::Name.of("한")
+      assert_equal "HANGUL SYLLABLE GAG", Unicode::Name.of("각")
+    end
 
     it "will return nil for characters without name" do
       assert_nil Unicode::Name.of("\u{10c50}")

@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.4.0
+
+* Support Hangul Syllables
+
 ### 1.3.0
 
 * Support Unicode 9.0
