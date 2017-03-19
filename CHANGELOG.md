@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.4.1
+
+* Be compatible with Ruby 2.4's surrogate literals
+* Bump unicode-types dependency
+
 ### 1.4.0
 
 * Support Hangul Syllables

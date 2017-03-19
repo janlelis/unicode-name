@@ -63,7 +63,7 @@ describe Unicode::Name do
     end
 
     it "will return <surrogate-hhhh> for codepoints in surrogate area" do
-      assert_equal "<surrogate-D800>", Unicode::Name.label("\u{D800}")
+      assert_equal "<surrogate-D800>", Unicode::Name.label("\xED\xA0\x80")
     end
 
     it "will return <noncharacter-hhhh> for codepoints defined as noncharacter" do
