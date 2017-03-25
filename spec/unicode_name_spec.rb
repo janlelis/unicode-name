@@ -29,6 +29,10 @@ describe Unicode::Name do
       assert_equal "LATIN CAPITAL LETTER A", Unicode::Name.correct("A")
     end
 
+    it "returns nothing if no name or correction alias exsits" do
+      assert_nil Unicode::Name.correct("\0")
+    end
+
     it "will return corrected name, if one exists" do
       assert_equal "LATIN CAPITAL LETTER GHA", Unicode::Name.correct("Ƣ")
     end

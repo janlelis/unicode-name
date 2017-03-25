@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.4.2
+
+* Fix that Unicode::Name.correct would not fail if codepoint has aliases but no correction
+
 ### 1.4.1
 
 * Be compatible with Ruby 2.4's surrogate literals

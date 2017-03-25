@@ -26,7 +26,9 @@ module Unicode
     def self.correct(char)
       codepoint = char.unpack("U")[0]
       require_relative "name/index" unless defined? ::Unicode::Name::INDEX
-      if correction = INDEX[:ALIASES][codepoint] && INDEX[:ALIASES][codepoint][:correction][-1]
+      if correction = INDEX[:ALIASES][codepoint] &&
+                      INDEX[:ALIASES][codepoint][:correction] &&
+                      INDEX[:ALIASES][codepoint][:correction][-1]
         correction
       else
         unicode_name(char)
