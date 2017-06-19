@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.5.0
+
+* Unicode 10
+
 ### 1.4.2
 
 * Fix that Unicode::Name.correct would not fail if codepoint has aliases but no correction
