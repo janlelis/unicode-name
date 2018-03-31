@@ -4,9 +4,9 @@ Return Unicode codepoint names, aliases, and labels.
 
 Unicode version: **10.0.0**
 
-Supported Rubies: **2.5**, **2.4**, **2.3**, **2.2**
+Supported Rubies: **2.5**, **2.4**, **2.3**
 
-Old Rubies that might still work: **2.1**, **2.0**
+Old Rubies that might still work: **2.2**, **2.1**, **2.0**
 
 ## Usage
 
@@ -21,7 +21,7 @@ Unicode::Name.of "한" # => "HANGUL SYLLABLE HAN"
 
 # Aliases, by type
 Unicode::Name.aliases "\t" # => {:control=>["CHARACTER TABULATION", "HORIZONTAL TABULATION"],
-                                 :abbreviation=>["HT", "TAB"]} 
+                                 :abbreviation=>["HT", "TAB"]}
 
 # Corrections (via .aliases[:correction], then name)
 Unicode::Name.correct "A" # => "LATIN CAPITAL LETTER A"
@@ -43,5 +43,5 @@ See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related 
 
 ## MIT License
 
-- Copyright (C) 2016-2017 Jan Lelis <http://janlelis.com>. Released under the MIT license.
+- Copyright (C) 2016-2018 Jan Lelis <http://janlelis.com>. Released under the MIT license.
 - Unicode data: http://www.unicode.org/copyright.html#Exhibit1
