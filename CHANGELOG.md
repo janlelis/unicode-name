@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### Next
+
+* Do not depend on rubygems (only use zlib stdlib for unzipping)
+
 ### 1.5.2
 
 * Explicitly load rubygems/util, fixes regression in 1.5.1
