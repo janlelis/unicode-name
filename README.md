@@ -1,10 +1,10 @@
-# Unicode::Name [![[version]](https://badge.fury.io/rb/unicode-name.svg)](http://badge.fury.io/rb/unicode-name)  [![[travis]](https://travis-ci.org/janlelis/unicode-name.png)](https://travis-ci.org/janlelis/unicode-name)
+# Unicode::Name [![[version]](https://badge.fury.io/rb/unicode-name.svg)](https://badge.fury.io/rb/unicode-name)  [![[travis]](https://travis-ci.org/janlelis/unicode-name.png)](https://travis-ci.org/janlelis/unicode-name)
 
 Return Unicode codepoint names, aliases, and labels.
 
 Unicode version: **11.0.0**
 
-Supported Rubies: **2.5**, **2.4**, **2.3**
+Supported Rubies: **2.6**, **2.5**, **2.4**, **2.3**
 
 Old Rubies that might still work: **2.2**, **2.1**, **2.0**
 
