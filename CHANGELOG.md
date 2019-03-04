@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### Next
+
+* Unicode 12
+
 ### 1.6.0
 
 * Unicode 11
