@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-### Next
+### 1.7.0
 
 * Unicode 12
 
