@@ -39,6 +39,8 @@ Unicode::Name.readable("\0") # => "NULL"
 Unicode::Name.readable("\u{FFFFD}") # => "<private-use-FFFFD>"
 ```
 
+See [unicode-sequence_names](https://github.com/janlelis/unicode-sequence_name) for character names of more complex codepoint sequences.
+
 See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related micro libraries.
 
 ## MIT License
