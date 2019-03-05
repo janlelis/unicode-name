@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.7.1
+
+* Push unicode-types dependency to 1.4.0
+
 ### 1.7.0
 
 * Unicode 12
