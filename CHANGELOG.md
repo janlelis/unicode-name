@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.8.0 (unreleased)
+
+* Unicode 12.1
+
 ### 1.7.1
 
 * Push unicode-types dependency to 1.4.0
