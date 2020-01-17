@@ -6,9 +6,9 @@ Gem::Specification.new do |gem|
   gem.name          = "unicode-name"
   gem.version       = Unicode::Name::VERSION
   gem.summary       = "Returns name/aliases/label of a Unicode codepoint"
-  gem.description   = "[Unicode #{Unicode::Name::UNICODE_VERSION}] Returns name/aliases/label of a Unicode codepoint"
+  gem.description   = "[Unicode #{Unicode::Name::UNICODE_VERSION}] Returns the name, aliases, or label of a Unicode code point"
   gem.authors       = ["Jan Lelis"]
-  gem.email         = ["mail@janlelis.de"]
+  gem.email         = ["hi@ruby.consulting"]
   gem.homepage      = "https://github.com/janlelis/unicode-name"
   gem.license       = "MIT"
 
@@ -17,6 +17,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.required_ruby_version = "~> 2.0"
+  gem.required_ruby_version = ">= 2.0"
   gem.add_dependency "unicode-types", "~> 1.5"
 end
