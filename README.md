@@ -1,4 +1,4 @@
-# Unicode::Name [![[version]](https://badge.fury.io/rb/unicode-name.svg)](https://badge.fury.io/rb/unicode-name)  [![[travis]](https://travis-ci.org/janlelis/unicode-name.png)](https://travis-ci.org/janlelis/unicode-name)
+# Unicode::Name [![[version]](https://badge.fury.io/rb/unicode-name.svg)](https://badge.fury.io/rb/unicode-name)  [![[ci]](https://github.com/janlelis/unicode-name/workflows/Test/badge.svg)](https://github.com/janlelis/unicode-name/actions?query=workflow%3ATest)
 
 Return Unicode codepoint names, aliases, and labels.
 
