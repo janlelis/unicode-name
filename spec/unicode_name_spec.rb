@@ -22,6 +22,11 @@ describe Unicode::Name do
       assert_nil Unicode::Name.of("\u{10c50}")
       assert_nil Unicode::Name.of("\0")
     end
+
+    it "works with recent Unicode characters" do
+      assert_equal "KAKTOVIK NUMERAL ZERO", Unicode::Name.of("𝋀") # Unicode 15.0
+      assert_equal "ETHIOPIC SYLLABLE HHYAA", Unicode::Name.of("𞟣") # Unicode 14.0
+    end
   end
 
   describe ".correct" do
