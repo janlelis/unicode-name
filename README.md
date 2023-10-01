@@ -2,7 +2,7 @@
 
 Return Unicode codepoint names, aliases, and labels.
 
-Unicode version: **15.0.0** (September 2022)
+Unicode version: **15.1.0** (September 2023)
 
 Supported Rubies: **3.2**, **3.1**, **3.0**
 
