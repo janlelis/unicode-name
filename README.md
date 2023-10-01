@@ -45,5 +45,5 @@ See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related 
 
 ## MIT License
 
-- Copyright (C) 2016-2022 Jan Lelis <https://janlelis.com>. Released under the MIT license.
+- Copyright (C) 2016-2023 Jan Lelis <https://janlelis.com>. Released under the MIT license.
 - Unicode data: https://www.unicode.org/copyright.html#Exhibit1
