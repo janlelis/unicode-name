@@ -19,6 +19,9 @@ Unicode::Name.of "🚡" # => "AERIAL TRAMWAY"
 Unicode::Name.of "丁" # => "CJK UNIFIED IDEOGRAPH-4E01"
 Unicode::Name.of "한" # => "HANGUL SYLLABLE HAN"
 
+# Unicode 16 (2024) example
+Unicode::Name.of "𜱼" # => "SQUARE SPIRAL FROM TOP LEFT"
+
 # Aliases, by type
 Unicode::Name.aliases "\t" # => {:control=>["CHARACTER TABULATION", "HORIZONTAL TABULATION"],
                                  :abbreviation=>["HT", "TAB"]}
