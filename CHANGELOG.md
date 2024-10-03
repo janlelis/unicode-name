@@ -5,6 +5,7 @@
 Bugfix release:
 
 - Fix medial vowels not generated correctly for Hangul syllables #1
+- Unicode::Name.readable now also applies correction if one exists
 
 ### 1.13.0
 

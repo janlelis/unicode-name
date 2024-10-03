@@ -92,6 +92,7 @@ describe Unicode::Name do
   describe ".readable" do
     it "will return best readable representation of a codepoint" do
       assert_equal "LATIN CAPITAL LETTER A", Unicode::Name.readable("A")
+      assert_equal "LATIN CAPITAL LETTER GHA", Unicode::Name.readable("Ƣ")
       assert_equal "NULL", Unicode::Name.readable("\0")
       assert_equal "<noncharacter-FFFFF>", Unicode::Name.readable("\u{FFFFF}")
       assert_equal "<reserved-10C50>", Unicode::Name.readable("\u{10C50}")

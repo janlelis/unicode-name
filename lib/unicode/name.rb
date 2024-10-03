@@ -63,7 +63,7 @@ module Unicode
     end
 
     def self.readable(char)
-      unicode_name(char) ||
+      correct(char) ||
       ( as = aliases(char) ) &&
       ( as[:control]      && as[:control][0]      ||
         as[:figment]      && as[:figment][0]      ||
