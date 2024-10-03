@@ -16,6 +16,9 @@ describe Unicode::Name do
     it "works for Hangul Syllables" do
       assert_equal "HANGUL SYLLABLE HAN", Unicode::Name.of("한")
       assert_equal "HANGUL SYLLABLE GAG", Unicode::Name.of("각")
+      assert_equal "HANGUL SYLLABLE GAE", Unicode::Name.of("개")
+      assert_equal "HANGUL SYLLABLE GAENG", Unicode::Name.of("갱")
+      assert_equal "HANGUL SYLLABLE DWALB", Unicode::Name.of("돫")
     end
 
     it "will return nil for characters without name" do

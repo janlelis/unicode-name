@@ -78,7 +78,7 @@ module Unicode
     def self.hangul_decomposition(codepoint)
       base = codepoint - HANGUL_START
       final = base % HANGUL_FINAL_MAX
-      medial = (base - final) % HANGUL_MEDIAL_MAX
+      medial = (base % HANGUL_MEDIAL_MAX) / HANGUL_FINAL_MAX
       initial = base / HANGUL_MEDIAL_MAX
       "#{INDEX[:JAMO][:INITIAL][initial]}#{INDEX[:JAMO][:MEDIAL][medial]}#{INDEX[:JAMO][:FINAL][final]}"
     end
