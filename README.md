@@ -42,7 +42,11 @@ Unicode::Name.readable("\0") # => "NULL"
 Unicode::Name.readable("\u{FFFFD}") # => "<private-use-FFFFD>"
 ```
 
-See [unicode-sequence_names](https://github.com/janlelis/unicode-sequence_name) for character names of more complex codepoint sequences.
+See [unicode-sequence_names](https://github.com/janlelis/unicode-sequence_name) for character names of more complex codepoint sequences. This is how you could use both libraries together to get the most relevant name of a character:
+
+```ruby
+name = Unicode::SequenceName.of(char) || Unicode::Name.readable(char)
+```
 
 See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related micro libraries.
 
