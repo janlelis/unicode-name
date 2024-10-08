@@ -9,16 +9,24 @@ describe Unicode::Name do
       assert_equal "REPLACEMENT CHARACTER", Unicode::Name.of("�")
     end
 
-    it "works for CJK Ideographs" do
+    it "works for CJK unified ideographs" do
       assert_equal "CJK UNIFIED IDEOGRAPH-4E01", Unicode::Name.of("丁")
     end
 
-    it "works for Hangul Syllables" do
+    it "works for Hangul syllables" do
       assert_equal "HANGUL SYLLABLE HAN", Unicode::Name.of("한")
       assert_equal "HANGUL SYLLABLE GAG", Unicode::Name.of("각")
       assert_equal "HANGUL SYLLABLE GAE", Unicode::Name.of("개")
       assert_equal "HANGUL SYLLABLE GAENG", Unicode::Name.of("갱")
       assert_equal "HANGUL SYLLABLE DWALB", Unicode::Name.of("돫")
+    end
+
+    it "works with some ranges that have the codepoint embedded" do
+      assert_equal "EGYPTIAN HIEROGLYPH-143F5", Unicode::Name.of("𔏵")
+      assert_equal "KHITAN SMALL SCRIPT CHARACTER-18C12", Unicode::Name.of("𘰒")
+      assert_equal "TANGUT IDEOGRAPH-18D00", Unicode::Name.of("𘴀")
+      assert_equal "NUSHU CHARACTER-1B171", Unicode::Name.of("𛅱")
+      assert_equal "CJK COMPATIBILITY IDEOGRAPH-2F9B1", Unicode::Name.of("𧃒")
     end
 
     it "will return nil for characters without name" do

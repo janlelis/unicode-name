@@ -12,10 +12,16 @@ module Unicode
       codepoint = char.unpack("U")[0]
       require_relative "name/index" unless defined? ::Unicode::Name::INDEX
       if res = INDEX[:NAMES][codepoint]
-        res
-      elsif INDEX[:CJK].any?{ |cjk_range| codepoint >= cjk_range[0] && codepoint <= cjk_range[1] }
-        "CJK UNIFIED IDEOGRAPH-%.4X" % codepoint
-      elsif codepoint >= HANGUL_START && codepoint <= HANGUL_END
+        return res
+      end
+
+      INDEX[:CP_RANGES].each{|prefix, range|
+        if range.any?{ |range| codepoint >= range[0] && codepoint <= range[1] }
+          return "%s%.4X" %[prefix, codepoint]
+        end
+      }
+
+      if codepoint >= HANGUL_START && codepoint <= HANGUL_END
         "HANGUL SYLLABLE %s" % hangul_decomposition(codepoint)
       else
         nil

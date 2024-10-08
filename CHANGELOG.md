@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.13.2 (unreleased)
+
+- Optimize index size by removing ranges that have codepoints embedded
+- Fix missing Tangut ideographs
+
 ### 1.13.1
 
 Bugfix release:
