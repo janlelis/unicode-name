@@ -11,6 +11,7 @@ describe Unicode::Name do
 
     it "works for CJK unified ideographs" do
       assert_equal "CJK UNIFIED IDEOGRAPH-4E01", Unicode::Name.of("丁")
+      assert_equal "SQUARED CJK UNIFIED IDEOGRAPH-6709", Unicode::Name.of("🈶")
     end
 
     it "works for Hangul syllables" do
