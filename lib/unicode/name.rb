@@ -11,8 +11,9 @@ module Unicode
     def self.unicode_name(char) 
       codepoint = char.unpack("U")[0]
       require_relative "name/index" unless defined? ::Unicode::Name::INDEX
+
       if res = INDEX[:NAMES][codepoint]
-        return res
+        return insert_words(res)
       end
 
       INDEX[:CP_RANGES].each{|prefix, range|
@@ -87,6 +88,17 @@ module Unicode
       medial = (base % HANGUL_MEDIAL_MAX) / HANGUL_FINAL_MAX
       initial = base / HANGUL_MEDIAL_MAX
       "#{INDEX[:JAMO][:INITIAL][initial]}#{INDEX[:JAMO][:MEDIAL][medial]}#{INDEX[:JAMO][:FINAL][final]}"
+    end
+
+    def self.insert_words(raw_name)
+      raw_name.chars.map{ |char|
+        codepoint = char.ord
+        if codepoint < INDEX[:REPLACE_BASE]
+          char
+        else
+          "#{INDEX[:COMMON_WORDS][codepoint - INDEX[:REPLACE_BASE]]} "
+        end
+      }.join.chomp
     end
   end
 end
