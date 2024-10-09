@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-### 1.13.2 (unreleased)
+### 1.13.2
 
 - Optimize index size by removing ranges that have codepoints embedded
 - Optimize index size by substituting common words
