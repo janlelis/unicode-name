@@ -79,8 +79,6 @@ module Unicode
       label(char)
     end
 
-    private
-
     # See https://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_Syllables_Area
     def self.hangul_decomposition(codepoint)
       base = codepoint - HANGUL_START
@@ -99,6 +97,11 @@ module Unicode
           "#{INDEX[:COMMON_WORDS][codepoint - INDEX[:REPLACE_BASE]]} "
         end
       }.join.chomp
+    end
+
+    class << self
+      private :hangul_decomposition
+      private :insert_words
     end
   end
 end
