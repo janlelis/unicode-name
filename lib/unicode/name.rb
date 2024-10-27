@@ -18,7 +18,7 @@ module Unicode
 
       INDEX[:CP_RANGES].each{|prefix, range|
         if range.any?{ |range| codepoint >= range[0] && codepoint <= range[1] }
-          return "%s%.4X" %[prefix, codepoint]
+          return "%s%.4X" % [prefix, codepoint]
         end
       }
 
