@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.13.4
+
+- Fix regression introduced in 1.13.2 that some more CJK ideographs were missing
+
 ### 1.13.3
 
 - Fix regression introduced in 1.13.2 that some CJK ideographs were missing
