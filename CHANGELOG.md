@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.14.5 (unreleased)
+
+- Unicode 17.0
+
 ### 1.13.5
 
 - Fix Ruby warning, patch by @scivola
