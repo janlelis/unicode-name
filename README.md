@@ -4,8 +4,6 @@ Return Unicode codepoint names, aliases, and labels.
 
 Unicode version: **16.0.0** (September 2024)
 
-Supported Rubies: **3.x** (**2.X** might still work)
-
 ## Usage
 
 ```ruby
