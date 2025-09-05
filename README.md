@@ -50,5 +50,5 @@ See [unicode-name.js](https://github.com/janlelis/unicode-name.js) for a JavaScr
 
 ## MIT License
 
-- Copyright (C) 2016-2024 Jan Lelis <https://janlelis.com>. Released under the MIT license.
+- Copyright (C) 2016-2025 Jan Lelis <https://janlelis.com>. Released under the MIT license.
 - Unicode data: https://www.unicode.org/copyright.html#Exhibit1
