@@ -37,6 +37,7 @@ describe Unicode::Name do
     end
 
     it "works with recent Unicode characters" do
+      assert_equal "TOLONG SIKI LETTER I", Unicode::Name.of("𑶰") # Unicode 17.0
       assert_equal "SQUARE SPIRAL FROM TOP LEFT", Unicode::Name.of("𜱼") # Unicode 16.0
       assert_equal "ALCHEMICAL SYMBOL FOR QUICK LIME", Unicode::Name.of("🝁") # Unicode 15.1
       assert_equal "KAKTOVIK NUMERAL ZERO", Unicode::Name.of("𝋀") # Unicode 15.0
