@@ -19,5 +19,5 @@ Gem::Specification.new do |gem|
   gem.metadata      = { "rubygems_mfa_required" => "true" }
 
   gem.required_ruby_version = ">= 2.0"
-  gem.add_dependency "unicode-types", "~> 1.11"
+  gem.add_dependency "unicode-types", "~> 1.12"
 end
