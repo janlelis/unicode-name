@@ -37,6 +37,7 @@ describe Unicode::Name do
     end
 
     it "works with recent Unicode characters" do
+      assert_equal "MUSICAL SYMBOL G CLEF OTTAVA BASSA WITH C CLEF", Unicode::Name.of("𝉷") # Unicode 18.0
       assert_equal "TOLONG SIKI LETTER I", Unicode::Name.of("𑶰") # Unicode 17.0
       assert_equal "SQUARE SPIRAL FROM TOP LEFT", Unicode::Name.of("𜱼") # Unicode 16.0
       assert_equal "ALCHEMICAL SYMBOL FOR QUICK LIME", Unicode::Name.of("🝁") # Unicode 15.1

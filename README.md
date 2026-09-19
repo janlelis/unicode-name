@@ -15,6 +15,9 @@ Unicode::Name.of "🚡" # => "AERIAL TRAMWAY"
 Unicode::Name.of "丁" # => "CJK UNIFIED IDEOGRAPH-4E01"
 Unicode::Name.of "한" # => "HANGUL SYLLABLE HAN"
 
+# Unicode 18 (2026) example
+Unicode::Name.of "𝉷" # => "MUSICAL SYMBOL G CLEF OTTAVA BASSA WITH C CLEF"
+
 # Unicode 17 (2025) example
 Unicode::Name.of "𑶰" # => "TOLONG SIKI LETTER I"
 
