@@ -2,7 +2,7 @@
 
 Return Unicode codepoint names, aliases, and labels.
 
-Unicode version: **17.0.0** (September 2025)
+Unicode version: **18.0.0** (September 2026)
 
 ## Usage
 
