@@ -26,6 +26,7 @@ describe Unicode::Name do
       assert_equal "EGYPTIAN HIEROGLYPH-143F5", Unicode::Name.of("𔏵")
       assert_equal "KHITAN SMALL SCRIPT CHARACTER-18C12", Unicode::Name.of("𘰒")
       assert_equal "TANGUT IDEOGRAPH-18D00", Unicode::Name.of("𘴀")
+      assert_equal "SEAL CHARACTER-3D001", Unicode::Name.of("𽀁")
       assert_equal "NUSHU CHARACTER-1B171", Unicode::Name.of("𛅱")
       assert_equal "CJK COMPATIBILITY IDEOGRAPH-2F9B1", Unicode::Name.of("𧃒")
       assert_equal "CJK COMPATIBILITY IDEOGRAPH-F978", Unicode::Name.of("兩")

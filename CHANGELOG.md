@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.15.1 (unreleased)
+
+- Fix missing names of new Jurchen and Small Seal characters
+
 ### 1.15.0
 
 - Unicode 18.0
