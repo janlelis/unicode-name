@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-### 1.15.1 (unreleased)
+### 1.15.1
 
 - Fix missing names of new Jurchen and Small Seal characters
 
